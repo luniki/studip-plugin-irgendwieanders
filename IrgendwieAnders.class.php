@@ -76,18 +76,13 @@ class IrgendwieAnders extends AbstractStudIPSystemPlugin {
             var user = $w(a.className).find(function(c) {
               return c.startsWith("user-");
             });
-            a.src = path + "/" + (size === "normal" ? "large" : "medium")  + "/" + user;
+            a.src = path + "/" + size + "/" + user;
           });
         });
       };
 
       document.observe("dom:loaded", replace);
-<?
-/*
-    if (nobody.size() == 1)
-      nobody[0].src= "<?= $this->getPluginPath() ?>/critter_webservice.php/large/<?= $this->getRequestedUser()->username ?>";
-*/
-?>
+
     </script>
     <?
   }

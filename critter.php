@@ -33,7 +33,7 @@
  * Example:
  *
  *   # creates a critter PNG
- *   $critter = new Critter('large');
+ *   $critter = new Critter('normal');
  *   $critter->compose(1, 4, 2, 5, 6);
  *
  *
@@ -46,7 +46,7 @@
 class Critter {
 
   /**
-   * @param string size of the critter image; choose one of small|medium|large
+   * @param string size of the critter image; choose one of small|medium|normal
    *
    * @return type <description>
    */
@@ -56,7 +56,7 @@ class Critter {
 
 
   /**
-   * @param string size of the critter image; choose one of small|medium|large
+   * @param string size of the critter image; choose one of small|medium|normal
    *
    * @return type <description>
    */
@@ -69,9 +69,9 @@ class Critter {
    * @access private
    */
   function size_name($size) {
-    $sizes = array('small'  => '-smaller',
-                   'medium' => '-small',
-                   'large'  => '-large');
+    $sizes = array('small'  => '-small',
+                   'medium' => '-medium',
+                   'normal' => '-normal');
     return isset($sizes[$size]) ? $sizes[$size] : current($sizes);
   }
 
